@@ -10,7 +10,19 @@ To print for example 1234 in base 10 numeral system first the 1234/10 (123) shou
 
 #include <stdio.h>
 
+ void system(int what, int where){
+  if (what >= where) system(what/where, where);
+  printf("%d", what%where);
+
+
+}
+
+
 int main(){
+  int what = 16;
+  int where = 2;
+  system(what, where);
+  
 
 
   return 0;
