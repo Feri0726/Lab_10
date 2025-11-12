@@ -22,8 +22,30 @@ Complete the program to print the first 10 elements of the sequences! For arithm
 
 
 #include <stdio.h>
+int arit(int n){
+  if (n == 1) return 1;
+  else{
+    return (arit(n-1)+5);
+}
+}
+
+int rec(int n){
+  if (n == 1) return 2;
+  else{
+      return (rec(n-1)*2);
+  }
+}
+
+
 
 int main(){
+ for (int i = 1; i < 11; i++){
+  printf("%d\t", arit(i));
+ }
+ printf("\n");
+ for (int i = 1; i < 11; i++){
+  printf("%d\t", rec(i));
+ }
 
 
   return 0;
