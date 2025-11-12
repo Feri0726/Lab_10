@@ -12,7 +12,7 @@ To printf 3 digits with leading zeros use %03d in the format string.
 
 #include <stdio.h>
 
-int pretty(int n)
+void pretty(int n)
 {
   if (n >= 1000)
     pretty(n / 1000);
@@ -21,7 +21,7 @@ int pretty(int n)
 
 int main()
 {
-  pretty(1121529);
+  pretty(16121529);
 
   return 0;
 }
