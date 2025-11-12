@@ -7,8 +7,26 @@ Create in main an array of five, and another one of ten integers (initialized). 
 
 #include <stdio.h>
 
-int main(){
+void printer(int *array, int size){
+  if (size == 0) return;
+  printf("%d ", array[0]);
+  printer(array+1, size-1);
+}
+void back(int *array, int size){
+  if (size == 0) return;
+  printf("%d ", array[9]);
+  back(array-1, size-1);
+}
 
+
+
+
+
+int main(){
+  int array[] = {1,2,3,4,5,6,7,8,9,10};
+  printer(array, 10);
+  printf("\n");
+  back(array, 10);
 
   return 0;
 }
